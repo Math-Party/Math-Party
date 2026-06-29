@@ -1,0 +1,70 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    box-sizing: border-box;
+    background: #fed9ff;;
+
+}
+
+.logo-container{
+    display: flex;
+    justify-content: center;
+}
+
+.img-logo{
+    width: 624px;
+    height: 390px;
+    /* width: 455px;
+    height: 284px; */
+    /* padding-bottom: 90px; */
+}
+
+.button-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 55px; 
+}
+
+button{
+    width: 360px;
+    height: 90px;
+    border-radius: 30px;
+    border: 3px solid #000;
+    background: #FFF;
+    box-shadow: 5px 5px 0px #bdbdbd;
+    font-family: "Afacad Flux", sans-serif;
+    font-size: 64px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.1s, box-shadow 0.1s;
+}
+
+button:active {
+    transform: translate(5px, 5px);
+    box-shadow: none;
+}
+
+.img-pecas{
+    width: 220px;
+    height: 550px;
+    aspect-ratio: 1/1;
+}
+
+.personagens{
+    display: flex;
+    justify-content: space-around;
+}
+
+
+  
+
+    
+    
+
+    
+
+
