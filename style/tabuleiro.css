@@ -1,0 +1,168 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Afacad Flux";
+}
+
+:root {
+    --background-color: #85d4cc;
+    --gray-color: #e0e0e0;
+    --font-color: #212121;
+    --white-color: #ffffff;
+    --black-color: #000000;
+ 
+    --purple-color: #7B39C2;
+    --purple2-color: #A055E2;
+    --ligth-purple-color: #AF7FE2;
+    --ligth-purple2-color: #D0A3F7;
+ 
+    --red-color: #840707;
+    --red2-color: #A81113;
+    --ligth-red-color: #C92639;
+    --ligth-red2-color: #FF6366;
+ 
+    --blue-color: #0A5184;
+    --blue2-color: #127FBE;
+    --ligth-blue-color: #4F9BC1;
+    --ligth-blue2-color: #7BD0FF;
+ 
+    --orange-color: #CE8852;
+    --orange2-color: #EB9E55;
+    --ligth-orange-color: #FFBF83;
+    --ligth-orange2-color: #FFD1A9;
+ 
+    --green-color: #2F8F5B;
+    --green2-color: #3FAE72;
+    --ligth-green-color: #6FCB9A;
+    --ligth-green2-color: #A6E4C2;
+ 
+    --yellow-color: #C99A1F;
+    --yellow2-color: #E0B62E;
+    --ligth-yellow-color: #F0CE5E;
+    --ligth-yellow2-color: #F7E29B;
+ 
+    --tema-red-color: #B5402E;
+    --tema-red2-color: #D1543F;
+    --ligth-tema-red-color: #E48266;
+    --ligth-tema-red2-color: #F0AF9B;
+
+    --card1-bg: #FFABAB;
+    --card2-bg: #FFE2C0;
+    --card3-bg: #DAF2FF;
+    --card4-bg: #DABBFF;
+
+}
+
+body {
+    font-family: 'Afacad Flux', sans-serif;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: clamp(1rem, 4vw, 2rem);
+    background-color: var(--background-color);
+    background-image: radial-gradient(circle, var(--gray-color) 0.060rem, rgba(0, 0, 0, 0) 0.060rem);
+    background-size: 1rem 1rem;
+    color: var(--font-color);
+}
+.board {
+  position: relative;
+  width: 1125px;
+  height: 675px;  
+}
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 473px;
+  height: 351px;
+  background: #fbdfb3;
+  border: 3px solid #1c1c1c;
+  border-radius: clamp(12px, 2vw, 30px);
+  box-shadow: 6px 6px 2px 0 rgba(0, 0, 0, 0.50);
+}
+.player-card {
+    position: absolute;
+    width: 252px;
+    height: 214px;
+    border: 3px solid #000;
+    border-radius: clamp(12px, 2vw, 30px);
+    box-shadow: 6px 6px 2px 0 rgba(0, 0, 0, 0.50);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.player-card.p1 {
+    top: 71px;
+    left: 84px;
+    background: var(--card1-bg);
+}
+
+.player-card.p2 {
+    top: 71px;
+    right: 84px;
+    background: var(--card2-bg);
+}
+
+.player-card.p3 {
+    bottom: 71px;
+    left: 84px;
+    background: var(--card3-bg);
+}
+
+.player-card.p4 {
+    bottom: 71px;
+    right: 84px;
+    background: var(--card4-bg);
+}
+
+.player-card .name {
+    font-weight: 600;
+    font-size: 2rem;
+    margin-bottom: 4px;
+}
+
+
+.player-card .score {
+    font-weight: 600;
+    font-size: 2rem;
+}
+
+.crown {
+    position: absolute;
+    top: -16px;
+    left: 10px;
+    font-size: 20px;
+}
+
+ .tile {
+    position: absolute;
+    width: 75px;
+    height: 75px;
+    background: #ffffff;
+    border-radius: clamp(12px, 2vw, 30px);
+    box-shadow: 0 3px 0 rgba(0,0,0,0.25);
+    transition: filter 0.15s ease;
+  }
+  .tile.pink   { background: var(--card1-bg); }
+  .tile.orange { background: var(--card2-bg); }
+  .tile.blue   { background: var(--card3-bg); }
+  .tile.purple { background: var(--card4-bg); }
+ 
+  #token {
+    position: absolute;
+    width: 3.4%;
+    height: 5%;
+    border-radius: 50%;
+    background: #d4533e;
+    border: 3px solid #fff;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+    transition: left 0.4s ease, top 0.4s ease;
+    pointer-events: none;
+    z-index: 10;
+  }
