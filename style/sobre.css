@@ -139,13 +139,47 @@ h2{
     padding-bottom: 0.35rem;
 }
 
+h3{
+    font-family: 'Sour Gummy';
+    font-weight: 600;
+    font-size: clamp(1.4rem, 4.5vw, 2.25rem);
+    color: var(--font-color);
+    position: relative;
+    padding-bottom: 0.35rem;
+
+}
+
+ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    padding-left: 0.25rem;
+    margin-top: 0.4rem;
+}
+
+ul li {
+    font-size: clamp(0.875rem, 2.5vw, 1.25rem);
+    line-height: 1.25;
+    color: var(--font-color);
+    padding-left: 1.4rem;
+    position: relative;
+}
+
+ul li::before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    font-weight: 800;
+}
+
 p {
     font-size: clamp(0.875rem, 2.5vw, 1.25rem);
     line-height: 1.65;
     color: var(--font-color);
     margin-bottom: 0.5rem;
 }
-ul li{
+.contato li{
     font-size: clamp(0.875rem, 2.5vw, 1.25rem);
     line-height: 1.65;
     color: var(--font-color);
