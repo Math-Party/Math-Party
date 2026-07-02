@@ -18,6 +18,7 @@
 <body>
         <div class="board" id="board">
         <div class="center" id="center">
+            <p id="rodadaTexto">Rodada 1/8</p>
             <h2 id="turnoTexto">Sua vez: Jogador 1</h2>
 
             <div class="dice-scene">
@@ -88,7 +89,103 @@
         <img src="../images/multiplicacaoExpressao.png" alt="">
         <span class="score">0 pontos</span>
     </div>
+
+    <div class="pergunta-overlay" id="perguntaOverlay">
+        <div class="pergunta-card">
+            <div class="pergunta-header">
+                <div class="pergunta-timer">
+                    <span class="pergunta-timer-icone">⏱</span>
+                    <span id="perguntaTimer">60</span>s
+                </div>
+                <h2 class="pergunta-titulo">Pergunta:</h2>
+                <img class="pergunta-avatar" id="perguntaAvatar" src="" alt="Avatar do jogador">
+            </div>
+
+            <div class="pergunta-nivel-badge" id="perguntaNivelBadge"></div>
+
+            <div class="pergunta-corpo">
+                <div class="pergunta-imagem-wrap" id="perguntaImagemWrap">
+                    <img class="pergunta-imagem" id="perguntaImagem" alt="Imagem de apoio da pergunta">
+                </div>
+                <p id="perguntaTexto"></p>
+            </div>
+
+            <div class="pergunta-opcoes" id="perguntaOpcoes"></div>
+
+            <p class="pergunta-resultado" id="perguntaResultado"></p>
+
+            <div class="pergunta-rodape" id="perguntaRodape"></div>
+        </div>
+    </div>
+
+    <div class="decisao-overlay" id="decisaoOverlay">
+        <div class="decisao-card">
+            <span class="decisao-icone">💣</span>
+            <h2 class="decisao-titulo">DESAFIO!</h2>
+            <p class="decisao-tema">Tema da pergunta:<br><strong id="decisaoTema">—</strong></p>
+            <p class="decisao-info" id="decisaoInfo"></p>
+            <div class="decisao-opcoes">
+                <button type="button" class="decisao-btn aceitar" id="btnAceitarDesafio">Aceitar desafio</button>
+                <button type="button" class="decisao-btn transferir" id="btnTransferirDesafio">Transferir desafio</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="decisao-overlay" id="transferOverlay">
+        <div class="decisao-card">
+            <h2 class="decisao-titulo transfer-titulo">Escolha um jogador para transferir o desafio</h2>
+            <p class="decisao-info" id="transferInfoTexto"></p>
+            <div class="transfer-lista" id="transferLista"></div>
+        </div>
+    </div>
+
+    <div class="resultado-overlay" id="resultadoOverlay">
+        <div class="resultado-card">
+            <div class="resultado-header-badge" id="resultadoHeader">Resultado da pergunta</div>
+            <h2 class="resultado-titulo">Resultado</h2>
+            <div class="resultado-linhas" id="resultadoLinhas"></div>
+            <div class="resultado-botoes">
+                <button type="button" class="resultado-btn" id="btnExplicacao">Explicação</button>
+                <button type="button" class="resultado-btn principal" id="btnAvancar">Avançar</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="explicacao-overlay" id="explicacaoOverlay">
+        <div class="explicacao-topo">
+            <span class="explicacao-label">explicação</span>
+            <button type="button" class="explicacao-voltar" id="btnFecharExplicacao" aria-label="Voltar">◀</button>
+        </div>
+
+        <div class="explicacao-conteudo">
+            <h2 class="explicacao-titulo">Explicação</h2>
+
+            <div class="explicacao-card">
+                <p class="explicacao-secao-titulo">Pergunta:</p>
+                <p class="explicacao-pergunta" id="explicacaoPergunta"></p>
+
+                <div class="explicacao-opcoes" id="explicacaoOpcoes"></div>
+
+                <p class="explicacao-secao-titulo">Solução:</p>
+                <p class="explicacao-solucao" id="explicacaoTexto"></p>
+
+                <p class="explicacao-meta" id="explicacaoReferencia"></p>
+            </div>
+        </div>
+    </div>
+
+    <div class="resultado-overlay" id="fimJogoOverlay">
+        <div class="resultado-card fim-jogo-card">
+            <div class="resultado-header-badge">Fim de partida</div>
+            <h2 class="resultado-titulo">Resultado final</h2>
+            <div class="fim-jogo-linhas" id="fimJogoLinhas"></div>
+            <div class="resultado-botoes">
+                <button type="button" class="resultado-btn" id="btnVoltarMenu">Voltar ao menu</button>
+                <button type="button" class="resultado-btn principal" id="btnJogarNovamente">Jogar novamente</button>
+            </div>
+        </div>
+    </div>
+
     <script type="module" src="../script/tabuleiro.js"></script>
 </body>
-
 </html>
