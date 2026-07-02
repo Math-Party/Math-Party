@@ -16,34 +16,79 @@
 </head>
 
 <body>
-    <div class="board" id="board"></div>
-        <div class="center" id="center"></div>
+        <div class="board" id="board">
+        <div class="center" id="center">
+            <h2 id="turnoTexto">Sua vez: Jogador 1</h2>
 
-        <div class="player-card p1">
-            <span class="name">Jogador 1</span>
-            <img src="../images/adicaoExpressao.png" alt="">
-            <span class="score">35 pontos</span>
-        </div>
+            <div class="dice-scene">
+                <div class="dice-tilt">
+                    <div class="dice" id="dice">
+                        <div class="face face-1">
+                            <div class="pip mc"></div>
+                        </div>
+                        <div class="face face-2">
+                            <div class="pip tl"></div>
+                            <div class="pip br"></div>
+                        </div>
+                        <div class="face face-3">
+                            <div class="pip tl"></div>
+                            <div class="pip mc"></div>
+                            <div class="pip br"></div>
+                        </div>
+                        <div class="face face-4">
+                            <div class="pip tl"></div>
+                            <div class="pip tr"></div>
+                            <div class="pip bl"></div>
+                            <div class="pip br"></div>
+                        </div>
+                        <div class="face face-5">
+                            <div class="pip tl"></div>
+                            <div class="pip tr"></div>
+                            <div class="pip mc"></div>
+                            <div class="pip bl"></div>
+                            <div class="pip br"></div>
+                        </div>
+                        <div class="face face-6">
+                            <div class="pip tl"></div>
+                            <div class="pip tr"></div>
+                            <div class="pip ml"></div>
+                            <div class="pip mr"></div>
+                            <div class="pip bl"></div>
+                            <div class="pip br"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-        <div class="player-card p2">
-            <span class="name">Jogador 2</span>
-            <img src="../images/divisaoExpressao.png" alt="">
-            <span class="score">30 pontos</span>
+            <button id="rollBtn">Girar o dado</button>
         </div>
+    </div>
 
-        <div class="player-card p3">
-            <span class="name">Jogador 3</span>
-            <img src="../images/subtracaoExpressao.png" alt="">
-            <span class="score">30 pontos</span>
-        </div>
 
-        <div class="player-card p4">
-            <span class="name">Jogador 4</span>
-            <img src="../images/multiplicacaoExpressao.png" alt="">
-            <span class="score">30 pontos</span>
-        </div>
-    
-    <script src="../script/tabuleiro.js"></script>
+    <div class="player-card p1">
+        <span class="name">Jogador 1</span>
+        <img src="../images/adicaoExpressao.png" alt="">
+        <span class="score">0 pontos</span>
+    </div>
+
+    <div class="player-card p2">
+        <span class="name">Jogador 2</span>
+        <img src="../images/divisaoExpressao.png" alt="">
+        <span class="score">0 pontos</span>
+    </div>
+
+    <div class="player-card p3">
+        <span class="name">Jogador 3</span>
+        <img src="../images/subtracaoExpressao.png" alt="">
+        <span class="score">0 pontos</span>
+    </div>
+
+    <div class="player-card p4">
+        <span class="name">Jogador 4</span>
+        <img src="../images/multiplicacaoExpressao.png" alt="">
+        <span class="score">0 pontos</span>
+    </div>
+    <script type="module" src="../script/tabuleiro.js"></script>
 </body>
 
 </html>
